@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F4EC16C-43D4-4D81-BAE3-8E25C26CD24D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapperGenerator</RootNamespace>
+    <AssemblyName>MapperGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAppSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAppSetting.Designer.cs">
+      <DependentUpon>FormAppSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenerate.Designer.cs">
+      <DependentUpon>FormGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStructureManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStructureManagement.Designer.cs">
+      <DependentUpon>FormStructureManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateModel\PanelEntityModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplateModel\PanelEntityModel.Designer.cs">
+      <DependentUpon>PanelEntityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateModel\PanelFileModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplateModel\PanelFileModel.Designer.cs">
+      <DependentUpon>PanelFileModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateModel\PanelGeneric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplateModel\PanelGeneric.Designer.cs">
+      <DependentUpon>PanelGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateModel\PanelNamespaceModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplateModel\PanelNamespaceModel.Designer.cs">
+      <DependentUpon>PanelNamespaceModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateModel\PanelPropertyModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TemplateModel\PanelPropertyModel.Designer.cs">
+      <DependentUpon>PanelPropertyModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateFileModelToTreeViewBinder.cs" />
+    <Compile Include="SourceFileModelToTreeViewBinder.cs" />
+    <Compile Include="SourceModel\PanelPropertyModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SourceModel\PanelPropertyModel.Designer.cs">
+      <DependentUpon>PanelPropertyModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceModel\PanelGeneric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SourceModel\PanelGeneric.Designer.cs">
+      <DependentUpon>PanelGeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceModel\PanelClassModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SourceModel\PanelClassModel.Designer.cs">
+      <DependentUpon>PanelClassModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceModel\PanelNamespaceModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SourceModel\PanelNamespaceModel.Designer.cs">
+      <DependentUpon>PanelNamespaceModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceModel\PanelFileModel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SourceModel\PanelFileModel.Designer.cs">
+      <DependentUpon>PanelFileModel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAppSetting.resx">
+      <DependentUpon>FormAppSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenerate.resx">
+      <DependentUpon>FormGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStructureManagement.resx">
+      <DependentUpon>FormStructureManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TemplateModel\PanelEntityModel.resx">
+      <DependentUpon>PanelEntityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateModel\PanelFileModel.resx">
+      <DependentUpon>PanelFileModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateModel\PanelGeneric.resx">
+      <DependentUpon>PanelGeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateModel\PanelNamespaceModel.resx">
+      <DependentUpon>PanelNamespaceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateModel\PanelPropertyModel.resx">
+      <DependentUpon>PanelPropertyModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceModel\PanelPropertyModel.resx">
+      <DependentUpon>PanelPropertyModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceModel\PanelGeneric.resx">
+      <DependentUpon>PanelGeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceModel\PanelClassModel.resx">
+      <DependentUpon>PanelClassModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceModel\PanelNamespaceModel.resx">
+      <DependentUpon>PanelNamespaceModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceModel\PanelFileModel.resx">
+      <DependentUpon>PanelFileModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MapperGenerator.Library\MapperGenerator.Library.csproj">
+      <Project>{7d783b27-6b22-4ff7-a3c0-024a0e1eefd2}</Project>
+      <Name>MapperGenerator.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
